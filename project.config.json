@@ -1,0 +1,38 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "touristappid",
+	"projectname": "%E8%AF%B4%E4%B8%80%E4%B8%8B-%E6%97%A0appId",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "自定义",
+					"pathName": "pages/recordDetails/recordDetails",
+					"query": "scene = 25"
+				}
+			]
+		}
+	}
+}
