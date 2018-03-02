@@ -9,7 +9,8 @@
     "pages/report/report",
     "pages/help/help",
     "pages/record/record",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/face/face"
   ],
   "tabBar": {
     "color": "#999",

@@ -1,4 +1,10 @@
 /**index.wxss**/
+@import '/weui.wxss';
+
+.draw_botton_cover{
+  width: 600rpx
+}
+
 .swiper0{
   height: 888rpx;
 }

@@ -3,12 +3,26 @@ var loginInfo={};
 App({
   setConfig: { url: 'https://www.ipetsfamily.com/' },
   onLaunch: function () {
+    this.setCanvasData();
     this.userLogin();
   },
   globalData: {
     userInfo: null,
     token:'',
-    timer: null
+    timer: null,
+    canvasWidth: null,
+    canvasHeight: null
+  },
+  setCanvasData: function(){
+    try {
+        var res = wx.getSystemInfoSync()
+        this.setData({ 
+          canvasWidth: res.windowWidth, 
+          canvasHeight: res.windowHeight*0.6})
+          
+    } catch (e) {
+      console.log("error")
+    }
   },
   //登录
   userLogin: function(){

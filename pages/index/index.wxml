@@ -52,10 +52,13 @@
         <form bindsubmit="formSubmit" report-submit="true">
           <view class='form-password'>
             <view class='txt-btn'>
-              <button wx:if="{{!audiostate}}" class="btn" hover-class='hover-btn' bindlongtap='longtap' bindtouchcancel='touchcancel' bindtouchend='touchend'>
+               <button wx:if="{{!audiostate}}" class="btn" hover-class='hover-btn' bindlongtap='longtap' bindtouchcancel='touchcancel' bindtouchend='touchend'>
                 <image src='/images/microphone.png'></image>
                 <text>{{hint1}}</text>
-              </button>
+              </button> 
+              <!-- <button wx:if="{{!audiostate}}" class="weui-btn draw_botton_cover" bindtap='draw'>
+                <text>画 图</text>
+              </button> -->
               <block wx:else>
               <view class='audio-3'>
               <view class='playaudio {{playID == "1" ? "on" : ""}}' bindtap="audioPlay" data-key='1' hover-class='hover-btn'>{{time}}"</view>

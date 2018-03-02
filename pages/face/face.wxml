@@ -1,0 +1,55 @@
+<!--pages/face.wxml-->
+<view class="container">
+    <!--画布区域-->
+    <view class="canvas_area">
+        <!--注意：同一页面中的 canvas-id 不可重复，如果使用一个已经出现过的 canvas-id，该 canvas 标签对应的画布将被隐藏并不再正常工作-->
+        <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd">
+        </canvas>
+    </view>
+	<view class='canvas_tools_container'>
+      <view class='canvas_tools_text'>
+        选择笔触
+      </view>
+      <view class='canvas_sign_container'>
+        <view class="sign1" bindtap="penSelect" data-param="2"></view>
+        <view class="sign2" bindtap="penSelect" data-param="6"></view>
+        <view class="sign3" bindtap="penSelect" data-param="10"></view>
+        <view class="sign4" bindtap="penSelect" data-param="14"></view>
+        <view class="sign5" bindtap="penSelect" data-param="18"></view>
+      </view>
+    </view>
+
+    <view class='canvas_tools_container'>
+      <view class='canvas_tools_text'>
+        选择颜色
+      </view>
+      <view class='canvas_sign_container'>
+        <view class="color_choose_container red" bindtap="colorSelect" data-param="red"></view>
+        <view class="color_choose_container black" bindtap="colorSelect" data-param="black"></view>
+        <view class="color_choose_container green" bindtap="colorSelect" data-param="green"></view>
+        <view class="color_choose_container yellow" bindtap="colorSelect" data-param="yellow"></view>
+        <view class="color_choose_container blue" bindtap="colorSelect" data-param="blue"></view>
+        <view class="color_choose_container purple" bindtap="colorSelect" data-param="purple"></view>
+        <view class="color_choose_container brown" bindtap="colorSelect" data-param="brown"></view>
+      </view>
+    </view>
+
+     <!--画布工具区域-->
+    <view class='canvas_tools_container'>
+      <view class='canvas_tools_text'>
+        选择功能
+      </view>
+      <view class='canvas_func_container'>
+        <view bindtap='clearCanvas' class='func_style'><image class='image' src='/images/橡皮擦.png'></image></view>
+        <view bindtap='clearAll' class='func_style'><image class='image' src='/images/删除.png'></image></view> 
+         <!-- <view bindtap='clear'><image class='image' src='/images/背景.png'></image></view> -->
+      </view>
+    </view>
+    <view class="my_weui-btn_container">
+        <button class="my_weui-btn" bindtap='tphb'>确定</button>
+    </view>
+</view>
